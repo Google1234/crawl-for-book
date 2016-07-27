@@ -33,17 +33,18 @@ class dangdangSpider(scrapy.Spider):
     start_urls = [
         "http://promo.dangdang.com/subject.php?pm_id=3319619&tag_id=&sort=priority_asc&p=1"
     ]
-    page_id=1
+    page_id=already_response=0
     max_page_id=2361
     write_data_file='../data/book.txt'
     write_buff_size=1024*1024*10
     write_block_data = write_block(write_buff_size, write_data_file)
     def parse(self, response):
-        while self.page_id<=self.max_page_id:
-            self.page_id+=1
+        while self.page_id<self.max_page_id:
+            self.page_id += 1
             url=self.start_urls[0][:-1]+str(self.page_id)
             yield scrapy.Request(url,self.store)
     def store(self,response):
+        self.already_response+=1
         bookname=   response.xpath('//ul[@class="pro_list"]/li/p[@class="name"]/a/@title').extract()
         buy=    response.xpath('//ul[@class="pro_list"]/li/p[@class="name"]/a/@href').extract()
         price=  response.xpath('//ul[@class="pro_list"]/li/p[@class="price_d2"]/span/text()').extract()
@@ -51,5 +52,6 @@ class dangdangSpider(scrapy.Spider):
             self.write_block_data.push(bookname[i].encode('utf-8')+'#####')
             self.write_block_data.push(buy[i].encode('utf-8')+'#####')
             self.write_block_data.push(price[i].encode('utf-8')+'#####'+'\n')
-        if self.page_id>self.max_page_id:
+        print "already_response--->",self.already_response
+        if self.already_response>=self.max_page_id:
             self.write_block_data.close()

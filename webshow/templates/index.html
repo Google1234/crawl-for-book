@@ -25,25 +25,20 @@ $def with(searchword,target_list)
 <br><br><br><br>
 
 $if len(target_list) > 0:
-	<div style="margin-top:30px">
-		<div class="row">
-			<div class="col-sm-10">
-				$for target in target_list:
-					<div class="col-lg-11 col-lg-offset-0">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-									$target['name']
-							</div>
-							<div class="panel-body">
-								 $target['price'] ... <a href="/news?id=$target['price']" >查看原始>>></a>
-							<br><br>
-							购买链接:<a href=$target['url']>$target['url']</a>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
+	$for target in target_list:
+		<ul class="pro_list"><li id="23432772"><p class="pic"><a href="http://product.dangdang.com/Product.aspx?product_id=23432772" target="_blank" title="2014社会工作者职业水平考试历年真题解析与全真模拟中级（综合能力+实务）"><img width="200" height="200" src="http://img3x2.ddimg.cn/66/6/23432772-1_b.jpg" title="2014社会工作者职业水平考试历年真题解析与全真模拟中级（综合能力+实务）" alt="2014社会工作者职业水平考试历年真题解析与全真模拟中级（综合能力+实务）"></a></p>
+                  <p class="name"><a href="http://product.dangdang.com/Product.aspx?product_id=23432772" target="_blank" title="2014社会工作者职业水平考试历年真题解析与全真模拟中级（综合能力+实务）">2014社会工作者职业水平考试历年真题解析与全真模拟中级（综合能力+</a></p>
+                  <p class="price_m">定价：<span>￥39.80</span></p>
+                  <p class="price_d2">当当价：<span>￥31.40起</span></p><p class="choice"><input id="23432772_checkbox" type="checkbox" value="23432772"><label class="check_label" for="23432772_checkbox">选购此商品</label></p></li><li id="23432803"><p class="pic"><a href="http://product.dangdang.com/Product.aspx?product_id=23432803" target="_blank" title="全国计算机等级考试 教程 二级Visuak Basic无纸化考试专用"><img width="200" height="200" src="http://img3x3.ddimg.cn/97/0/23432803-1_b.jpg" title="全国计算机等级考试 教程 二级Visuak Basic无纸化考试专用" alt="全国计算机等级考试 教程 二级Visuak Basic无纸化考试专用"></a></p>
+                  <p class="name"><a href="http://product.dangdang.com/Product.aspx?product_id=23432803" target="_blank" title="全国计算机等级考试 教程 二级Visuak Basic无纸化考试专用">全国计算机等级考试 教程 二级Visuak Basic无纸化考试专用</a></p>
+                  <p class="price_m">定价：<span>￥38.00</span></p>
+                  <p class="price_d2">当当价：<span>￥26.60起</span></p><p class="choice"><input id="23432803_checkbox" type="checkbox" value="23432803"><label class="check_label" for="23432803_checkbox">选购此商品</label></p></li><li id="23432821"><p class="pic"><a href="http://product.dangdang.com/Product.aspx?product_id=23432821" target="_blank" title="水工钢筋混凝土结构学习辅导及习题(普通高等教育“十一五”国家级规划教材 高等学校水利学科专业规范核心课程配套教材)"><img width="200" height="200" src="http://img3x1.ddimg.cn/16/18/23432821-1_b.jpg" title="水工钢筋混凝土结构学习辅导及习题(普通高等教育“十一五”国家级规划教材 高等学校水利学科专业规范核心课程配套教材)" alt="水工钢筋混凝土结构学习辅导及习题(普通高等教育“十一五”国家级规划教材 高等学校水利学科专业规范核心课程配套教材)"></a></p>
+                  <p class="name"><a href="http://product.dangdang.com/Product.aspx?product_id=23432821" target="_blank" title="水工钢筋混凝土结构学习辅导及习题(普通高等教育“十一五”国家级规划教材 高等学校水利学科专业规范核心课程配套教材)">水工钢筋混凝土结构学习辅导及习题(普通高等教育“十一五”国家级规</a></p>
+                  <p class="price_m">定价：<span>￥28.00</span></p>
+                  <p class="price_d2">当当价：<span>￥25.20起</span></p><p class="choice"><input id="23432821_checkbox" type="checkbox" value="23432821"><label class="check_label" for="23432821_checkbox">选购此商品</label></p></li><li id="23432825"><p class="pic"><a href="http://product.dangdang.com/Product.aspx?product_id=23432825" target="_blank" title="雅思阅读与写作词汇强化手册"><img width="200" height="200" src="http://img3x5.ddimg.cn/20/22/23432825-1_b.jpg" title="雅思阅读与写作词汇强化手册" alt="雅思阅读与写作词汇强化手册"></a></p>
+                  <p class="name"><a href="http://product.dangdang.com/Product.aspx?product_id=23432825" target="_blank" title="雅思阅读与写作词汇强化手册">雅思阅读与写作词汇强化手册</a></p>
+                  <p class="price_m">定价：<span>￥35.00</span></p>
+                  <p class="price_d2">当当价：<span>￥28.40起</span></p><p class="choice"><input id="23432825_checkbox" type="checkbox" value="23432825"><label class="check_label" for="23432825_checkbox">选购此商品</label></p></li><li class="clear"></li></ul>
 $else:
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="panel panel-info">

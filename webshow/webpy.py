@@ -19,12 +19,14 @@ class index:
         topic=list()
         if searchword:
             while True:
-                name,price,url=0,0,0#main.search(searchword)
+                name,price,url,pic=0,0,0,0#main.search(searchword)
                 data = dict()
                 data['name'] =name
                 data['price']=price
                 data['url'] = url #url.decode("utf-8")
+                data['pic']=pic
                 target_list.append(data)
+                break
         return render.index(searchword,target_list)
 
 

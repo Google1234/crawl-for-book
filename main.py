@@ -5,6 +5,5 @@ def search(searchword):
     yield 0,0,0
 
 if __name__=="__main__":
-
+    #os.system("scrapy crawl dangdang")
     webpy.app.run()
-    print 1
